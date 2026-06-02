@@ -1,0 +1,17 @@
+[package]
+name = "cocapn-core"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Co-Captain distributed agent framework — devices that enhance but never replace"
+
+[dependencies]
+serde = { version = "1", optional = true, features = ["derive"] }
+tokio = { version = "1", optional = true, features = ["rt", "sync", "time"] }
+thiserror = "1"
+log = "0.4"
+
+[features]
+default = []
+serde = ["dep:serde"]
+tokio = ["dep:tokio"]
